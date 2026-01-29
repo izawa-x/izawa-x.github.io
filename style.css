@@ -1,0 +1,128 @@
+/* style.css content */
+
+/* 1. General Settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  
+  /* Animated Gradient Background */
+  background: linear-gradient(-45deg, #1c1c1c, #3a1c71, #d76d77, #ffaf7b);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 2. Glass Container (Main Box) */
+.glass-container {
+  background: rgba(255, 255, 255, 0.1); /* Transparent white */
+  backdrop-filter: blur(12px);          /* Frosted effect */
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* 3. Profile Styling */
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 30px 0;
+}
+
+/* 4. Project Cards */
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.project-card {
+  background: rgba(0, 0, 0, 0.2); /* Mas dark nang konti sa projects */
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  text-align: left;
+  transition: transform 0.3s ease, background 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Umaangat pag tinutok mouse */
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.project-card h3 {
+  font-size: 18px;
+  color: #ffaf7b; /* Accent color para sa title */
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* 5. Contact Button */
+.btn-contact {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn-contact:hover {
+  background: white;
+  color: #333;
+  transform: scale(1.05);
+}
